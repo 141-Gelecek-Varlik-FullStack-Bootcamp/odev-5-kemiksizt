@@ -35,7 +35,22 @@
       "ProjectGuid": "00258214-38ef-4beb-8e5c-4463e1e6fed1",
       "DisplayName": "Week3.Web",
       "ColorIndex": 5
+    },
+    "3f1adf67-0f6b-4976-8ea1-d52b06d6c1ee": {
+      "ProjectGuid": "3f1adf67-0f6b-4976-8ea1-d52b06d6c1ee",
+      "DisplayName": "Week3.Web",
+      "ColorIndex": 6
+    },
+    "70c2dd63-8aee-4e2f-8124-2ec98faaa678": {
+      "ProjectGuid": "70c2dd63-8aee-4e2f-8124-2ec98faaa678",
+      "DisplayName": "Week3.Web",
+      "ColorIndex": 7
+    },
+    "c5ab83c9-0df8-4a63-9e2a-686387fc4c96": {
+      "ProjectGuid": "c5ab83c9-0df8-4a63-9e2a-686387fc4c96",
+      "DisplayName": "Week3.Web",
+      "ColorIndex": 8
     }
   },
-  "NextColorIndex": 6
+  "NextColorIndex": 9
 }

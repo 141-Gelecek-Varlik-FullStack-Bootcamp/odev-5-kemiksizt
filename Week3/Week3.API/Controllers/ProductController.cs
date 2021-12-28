@@ -44,7 +44,7 @@ namespace Week3.API.Controllers
             return productService.GetProducts();
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("Update")]
         public General<ProductViewModel> UpdateProduct(int id, [FromBody] ProductViewModel product)
         {
             return productService.UpdateProduct(id, product);
