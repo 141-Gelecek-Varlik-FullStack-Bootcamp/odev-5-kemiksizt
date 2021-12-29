@@ -32,6 +32,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.IUser)
             </th>
+            <th>
+                <p>Update</p>
+            </th>
+            <th>
+                <p>Delete</p>
+            </th>
         </tr>
 
         
@@ -59,7 +65,13 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IUser)
-            </td>           
+            </td>
+            <td>
+                <button class="btn btn1">Update</button>
+            </td>
+            <td>
+                <button class="btn btn2">Delete</button>
+            </td>
         </tr>
         }
     </table>
@@ -72,5 +84,11 @@
     }
     table th{
         text-align: center;
+    }
+    .btn1{
+         background-color: #4CAF50;
+    }
+    .btn2{
+        background-color: #f44336;
     }
 </style>
