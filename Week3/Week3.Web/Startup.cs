@@ -13,6 +13,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Week3.API.Infrastructure;
 using Week3.Service.Job;
+using Week3.Service.Product;
 using Week3.Service.User;
 
 namespace Week3.Web
@@ -39,6 +40,7 @@ namespace Week3.Web
             services.AddSingleton(mapper);
 
             services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IProductService, ProductService>();
 
             services.AddControllersWithViews();
             services.AddHangfire(config =>

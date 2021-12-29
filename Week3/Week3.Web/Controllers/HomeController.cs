@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Week3.Model.User;
+using Week3.Service.Product;
 using Week3.Service.User;
 using Week3.Web.Models;
 
@@ -15,11 +16,13 @@ namespace Week3.Web.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IUserService userService;
+        private readonly IProductService productService;
 
-        public HomeController(ILogger<HomeController> logger, IUserService _userService)
+        public HomeController(ILogger<HomeController> logger, IUserService _userService, IProductService _productService)
         {
             _logger = logger;
             userService = _userService;
+            productService = _productService;
         }
 
         public IActionResult Index()
@@ -42,7 +45,15 @@ namespace Week3.Web.Controllers
                 return View();
             }
 
-            return RedirectToAction("Privacy", "Home");
+            return RedirectToAction("ProductList", "Home");
+        }
+
+
+        public IActionResult ProductList()
+        {
+            var productList = productService.GetProducts().List;
+
+            return View(productList);
         }
 
         public IActionResult Privacy()
