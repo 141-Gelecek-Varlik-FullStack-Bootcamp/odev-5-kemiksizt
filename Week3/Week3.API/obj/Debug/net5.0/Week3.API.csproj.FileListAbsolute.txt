@@ -353,3 +353,11 @@ C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.API\obj\Debug\net5.
 C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.API\obj\Debug\net5.0\ref\Week3.API.dll
 C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.API\obj\Debug\net5.0\Week3.API.pdb
 C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.API\obj\Debug\net5.0\Week3.API.genruntimeconfig.cache
+C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.API\bin\Debug\net5.0\Hangfire.AspNetCore.dll
+C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.API\bin\Debug\net5.0\Hangfire.Core.dll
+C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.API\bin\Debug\net5.0\Hangfire.MemoryStorage.dll
+C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.API\bin\Debug\net5.0\es\Hangfire.Core.resources.dll
+C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.API\bin\Debug\net5.0\nl\Hangfire.Core.resources.dll
+C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.API\bin\Debug\net5.0\pt-BR\Hangfire.Core.resources.dll
+C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.API\bin\Debug\net5.0\zh-TW\Hangfire.Core.resources.dll
+C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.API\bin\Debug\net5.0\zh\Hangfire.Core.resources.dll

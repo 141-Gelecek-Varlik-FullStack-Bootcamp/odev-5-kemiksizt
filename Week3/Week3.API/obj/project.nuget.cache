@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "wDgRdjf3L2ONgP41n7InR0lkuHOMy6DaL9FxDDNJkL9bxNth0AufcMbwSHfNjusvgFfnoz2fULbeJWpeMCn97w==",
+  "dgSpecHash": "Uwo7qw8NIM4NuLDcLs2WDdjjnlAfc1EOAmWCy99p7nR8YFoYdiW+5dQyyqumKB3UXy8n2/QF6cRghNlirzdTTQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Turab\\Documents\\GitHub\\odev-5-kemiksizt\\Week3\\Week3.API\\Week3.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Turab\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\Turab\\.nuget\\packages\\hangfire.aspnetcore\\1.7.9\\hangfire.aspnetcore.1.7.9.nupkg.sha512",
+    "C:\\Users\\Turab\\.nuget\\packages\\hangfire.core\\1.7.9\\hangfire.core.1.7.9.nupkg.sha512",
+    "C:\\Users\\Turab\\.nuget\\packages\\hangfire.memorystorage\\1.7.0\\hangfire.memorystorage.1.7.0.nupkg.sha512",
     "C:\\Users\\Turab\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Turab\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\Turab\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",
