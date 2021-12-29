@@ -7,8 +7,9 @@
     ViewBag.Title = "Market";
 }
 
-
-    <table> class = "table table-bordered">
+<div>
+    <h2>Product Table</h2>
+     <table class="table table-striped table-bordered table-border">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.CategoryId)
@@ -62,4 +63,14 @@
         </tr>
         }
     </table>
+</div>
 
+    <style>
+
+    table td{
+        text-align: center;
+    }
+    table th{
+        text-align: center;
+    }
+</style>
