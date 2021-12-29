@@ -17,6 +17,12 @@ namespace Week3.API.Controllers
             productService = _productService;
         }
 
+        [HttpGet("{id}")]
+        public General<ProductViewModel> GetById(int id)
+        {
+            return productService.GetById(id);
+        }
+
         [HttpPost("Delete")]
         [ServiceFilter(typeof(LoginFilter))]
         public General<ProductViewModel> DeleteUser(int id, [FromBody] ProductViewModel product)
@@ -24,11 +30,11 @@ namespace Week3.API.Controllers
             return productService.DeleteProduct(id, product);
         }
 
-        [HttpGet("{Id}")]
-        public General<ProductViewModel> GetProductListById(int id, ProductViewModel product)
-        {
-            return productService.GetProductListById(id, product);
-        }
+        //[HttpGet("{IUser}")]
+        //public General<ProductViewModel> GetProductListById(int id)
+        //{
+        //    return productService.GetProductListById(id);
+        //}
 
 
         [HttpPost("Insert")]

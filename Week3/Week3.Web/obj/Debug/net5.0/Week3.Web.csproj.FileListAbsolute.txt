@@ -104,3 +104,5 @@ C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.Web\obj\Debug\net5.
 C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.Web\obj\Debug\net5.0\staticwebassets\Week3.Web.StaticWebAssets.xml
 C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.Web\obj\Debug\net5.0\Razor\Views\Home\Login.cshtml.g.cs
 C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.Web\obj\Debug\net5.0\Razor\Views\Home\ProductList.cshtml.g.cs
+C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.Web\obj\Debug\net5.0\Razor\Views\Home\InsertProduct.cshtml.g.cs
+C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.Web\obj\Debug\net5.0\Razor\Views\Product\UpdateProduct.cshtml.g.cs

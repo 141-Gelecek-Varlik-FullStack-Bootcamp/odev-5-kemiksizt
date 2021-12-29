@@ -20,31 +20,55 @@ namespace Week3.Service.Product
             mapper = _mapper;
         }
 
-        // Sistemdeki belirtilen id grubuna ait bütün ürünleri getiren Request(GetById)
-        public General<ProductViewModel> GetProductListById(int id, ProductViewModel product)
+        public General <ProductViewModel> GetById(int id)
         {
             var result = new General<ProductViewModel>();
 
             using (var context = new GrootContext())
             {
-                var data = context.User
-                    .Where(x => x.IsActive && !x.IsDeleted && x.Iuser == id)
-                    .OrderBy(x => x.Id);
+                var data = context.Product.SingleOrDefault(x => x.Id == id && !x.IsDeleted && x.IsActive);
 
-                if (data.Any())
+                if(data is not null)
                 {
-                    result.List = mapper.Map<List<ProductViewModel>>(data);
+                    result.Entity = mapper.Map<ProductViewModel>(data);
                     result.IsSuccess = true;
-                    result.Message = "Listeleme işlemi başarılı!";
+                    result.Message = "Ürün getirme işlemi başarılı";
                 }
+
                 else
                 {
-                    result.ExceptionMessage = "Sistemde hiçbir ürün yok";
+                    result.ExceptionMessage = "Aranan ürün bulunamadı";
                 }
             }
 
             return result;
         }
+
+        // Sistemdeki belirtilen id grubuna ait bütün ürünleri getiren Request(GetById)
+        //public General<ProductViewModel> GetProductListById(int id)
+        //{
+        //    var result = new General<ProductViewModel>();
+
+        //    using (var context = new GrootContext())
+        //    {
+        //        var data = context.User
+        //            .Where(x => x.IsActive && !x.IsDeleted && x.Iuser == id)
+        //            .OrderBy(x => x.Id);
+
+        //        if (data.Any())
+        //        {
+        //            result.List = mapper.Map<List<ProductViewModel>>(data);
+        //            result.IsSuccess = true;
+        //            result.Message = "Listeleme işlemi başarılı!";
+        //        }
+        //        else
+        //        {
+        //            result.ExceptionMessage = "Sistemde hiçbir ürün yok";
+        //        }
+        //    }
+
+        //    return result;
+        //}
         // Sistemdeki ürüne ait tüm özellikleri silen Request. Deneme amaçlı yapılmıştır!!
         /*
         public General<ProductViewModel> DeleteProduct(int id)

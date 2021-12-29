@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+@model Week3.Model.Product.ProductViewModel
+
+<form method="post" asp-controller="Product" asp-action="UpdateProduct">
+    @Html.HiddenFor(model => model.Id)
+    <div class="mb-3">
+        <label for="CategoryId" class="form-label">Category Id</label>
+        <input name="text" type="text" class="form-control" id="categoryId" aria-describedby="categoryId" value="@Model.CategoryId">
+    </div>
+    
+    <div class="mb-3">
+        <label for="Name" class="form-label">Product Name</label>
+        <input name="text" type="text" class="form-control" id="name" aria-describedby="Name" value="@Model.Name">
+    </div>
+
+    <div class="mb-3">
+        <label for="DisplayName" class="form-label">Display Name</label>
+        <input type="text" name="displayName" class="form-control" id="displayName" value="@Model.DisplayName">
+    </div>
+
+    <div class="mb-3">
+        <label for="Description" class="form-label">Product Description</label>
+        <input type="text" name="description" class="form-control" id="description" value="@Model.Description">
+    </div>
+
+    <div class="mb-3">
+        <label for="Price" class="form-label">Medicine Price</label>
+        <input type="text" name="price" class="form-control" id="price" value="@Model.Price">
+    </div>
+
+    <div class="mb-3">
+        <label for="Stock" class="form-label">Medicine Stock</label>
+        <input type="text" name="stock" class="form-control" id="stock" value="@Model.Stock">
+    </div>
+
+    <div class="mb-3">
+        <label for="Iuser" class="form-label">Medicine IUser</label>
+        <input type="text" name="iuser" class="form-control" id="iuser" value="@Model.IUser">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update Product</button>
+</form>

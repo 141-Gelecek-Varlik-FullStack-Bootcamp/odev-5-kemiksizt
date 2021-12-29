@@ -13,11 +13,12 @@ namespace Week3.Service.Product
 
         //ProductService içerisinde kullanılacak işlemleri bu interface içerisinde tanımladım.
 
+        public General<ProductViewModel> GetById(int id);
         public General<ProductViewModel> GetProducts();
         public General<ProductViewModel> InsertProduct(ProductViewModel newProduct);
         public General<ProductViewModel> UpdateProduct(int id, ProductViewModel product);
         //public General<ProductViewModel> DeleteProduct(int id);
-        public General<ProductViewModel> GetProductListById(int id, ProductViewModel product);
+        //public General<ProductViewModel> GetProductListById(int id);
         public General<ProductViewModel> DeleteProduct(int id, ProductViewModel product);
 
         public General<ListProductViewModel> SortProduct(string sortingParameter);
