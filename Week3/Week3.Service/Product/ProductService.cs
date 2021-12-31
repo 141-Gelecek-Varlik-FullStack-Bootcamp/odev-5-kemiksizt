@@ -20,29 +20,29 @@ namespace Week3.Service.Product
             mapper = _mapper;
         }
 
-        public General <ProductViewModel> GetById(int id)
-        {
-            var result = new General<ProductViewModel>();
+        //public General <ProductViewModel> GetById(int id)
+        //{
+        //    var result = new General<ProductViewModel>();
 
-            using (var context = new GrootContext())
-            {
-                var data = context.Product.SingleOrDefault(x => x.Id == id && !x.IsDeleted && x.IsActive);
+        //    using (var context = new GrootContext())
+        //    {
+        //        var data = context.Product.SingleOrDefault(x => x.Id == id && !x.IsDeleted && x.IsActive);
 
-                if(data is not null)
-                {
-                    result.Entity = mapper.Map<ProductViewModel>(data);
-                    result.IsSuccess = true;
-                    result.Message = "Ürün getirme işlemi başarılı";
-                }
+        //        if(data is not null)
+        //        {
+        //            result.Entity = mapper.Map<ProductViewModel>(data);
+        //            result.IsSuccess = true;
+        //            result.Message = "Ürün getirme işlemi başarılı";
+        //        }
 
-                else
-                {
-                    result.ExceptionMessage = "Aranan ürün bulunamadı";
-                }
-            }
+        //        else
+        //        {
+        //            result.ExceptionMessage = "Aranan ürün bulunamadı";
+        //        }
+        //    }
 
-            return result;
-        }
+        //    return result;
+        //}
 
         // Sistemdeki belirtilen id grubuna ait bütün ürünleri getiren Request(GetById)
         //public General<ProductViewModel> GetProductListById(int id)
@@ -158,13 +158,13 @@ namespace Week3.Service.Product
 
 
         // Var olan ürünün özelliklerini değiştirmek için kullanılan Request.(Update)
-        public General<ProductViewModel> UpdateProduct(int id, ProductViewModel product)
+        public General<ProductViewModel> UpdateProduct(ProductViewModel product)
         {
             var data = new General<ProductViewModel>();
 
             using (var context = new GrootContext())
             {
-                var updatedProduct = context.Product.SingleOrDefault(i => i.Id == id);
+                var updatedProduct = context.Product.SingleOrDefault(i => i.Id == product.Id);
                 var permission = context.Product.Any(x => x.IUser == product.IUser);
 
                 if (permission)
@@ -196,6 +196,31 @@ namespace Week3.Service.Product
             }
 
             return data;
+        }
+
+
+        public General<ProductViewModel> UpdateById(int id)
+        {
+            var result = new General<ProductViewModel>();
+
+            using (var context = new GrootContext())
+            {
+
+                var data = context.Product.SingleOrDefault(x => x.Id == id && x.IsActive && !x.IsDeleted);
+
+
+                if (data is not null)
+                {
+                    result.Entity = mapper.Map<ProductViewModel>(data);
+                    result.IsSuccess = true;
+                }
+                else
+                {
+                    result.ExceptionMessage = "Aranan ürün bulunamadı";
+                }
+            }
+
+            return result;
         }
 
         // Silme işlemi. Verilen tamamen silinmiyor yalnızca IsActive ve IsDelete kısımları değişiyor.

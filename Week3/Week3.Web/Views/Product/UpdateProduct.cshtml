@@ -4,19 +4,18 @@
 @{
 }
 
-
 @model Week3.Model.Product.ProductViewModel
 
 <form method="post" asp-controller="Product" asp-action="UpdateProduct">
     @Html.HiddenFor(model => model.Id)
     <div class="mb-3">
         <label for="CategoryId" class="form-label">Category Id</label>
-        <input name="text" type="text" class="form-control" id="categoryId" aria-describedby="categoryId" value="@Model.CategoryId">
+        <input name="categoryId" type="text" class="form-control" id="categoryId"  value="@Model.CategoryId">
     </div>
     
     <div class="mb-3">
         <label for="Name" class="form-label">Product Name</label>
-        <input name="text" type="text" class="form-control" id="name" aria-describedby="Name" value="@Model.Name">
+        <input name="name" type="text" class="form-control" id="name" value="@Model.Name">
     </div>
 
     <div class="mb-3">
@@ -30,18 +29,18 @@
     </div>
 
     <div class="mb-3">
-        <label for="Price" class="form-label">Medicine Price</label>
+        <label for="Price" class="form-label">Product Price</label>
         <input type="text" name="price" class="form-control" id="price" value="@Model.Price">
     </div>
 
     <div class="mb-3">
-        <label for="Stock" class="form-label">Medicine Stock</label>
+        <label for="Stock" class="form-label">Product Stock</label>
         <input type="text" name="stock" class="form-control" id="stock" value="@Model.Stock">
     </div>
 
     <div class="mb-3">
-        <label for="Iuser" class="form-label">Medicine IUser</label>
-        <input type="text" name="iuser" class="form-control" id="iuser" value="@Model.IUser">
+        <label for="IUser" class="form-label">Product IUser</label>
+        <input type="text" name="iUser" class="form-control" id="iuser" value="@Model.IUser">
     </div>
 
     <button type="submit" class="btn btn-primary">Update Product</button>

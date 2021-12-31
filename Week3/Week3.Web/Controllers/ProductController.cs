@@ -18,18 +18,17 @@ namespace Week3.Web.Controllers
         {
             return View();
         }
-
-        [HttpGet]
+      
         public IActionResult UpdateProduct(int id)
         {
-            var model = productService.GetById(id);
-            return View(model.Entity);
+            var product = productService.UpdateById(id);
+            return View(product.Entity);
         }
 
         [HttpPost]
-        public IActionResult UpdateProduct(int id, ProductViewModel product)
+        public IActionResult UpdateProduct(ProductViewModel product)
         {
-            var permission = productService.UpdateProduct(id, product);
+            var permission = productService.UpdateProduct(product);
 
             if(!permission.IsSuccess)
             {

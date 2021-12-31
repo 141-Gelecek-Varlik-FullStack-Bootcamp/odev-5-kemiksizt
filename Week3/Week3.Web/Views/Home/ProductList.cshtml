@@ -1,6 +1,5 @@
 ﻿
 
-
 @model IEnumerable<Week3.Model.Product.ProductViewModel>
 
 @{
@@ -45,34 +44,34 @@
         {
             <tr>
                 @Html.HiddenFor(modelItem => item.Id)
-            <td>
-                @Html.DisplayFor(modelItem => item.CategoryId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DisplayName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Stock)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IUser)
-            </td>
-            <td>
-                <button class="btn btn1">Update</button>
-            </td>
-            <td>
-                <button class="btn btn2">Delete</button>
-            </td>
-        </tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DisplayName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Stock)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IUser)
+                </td>
+                <td>
+                    <a class="btn btn1" asp-action="UpdateProduct" asp-controller="Product" asp-route-id="@item.Id">Update</a>
+                </td>
+                <td>
+                    <button class="btn btn2">Delete</button>
+                </td>
+            </tr>
         }
     </table>
 </div>
