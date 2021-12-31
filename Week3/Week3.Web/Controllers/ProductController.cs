@@ -36,7 +36,25 @@ namespace Week3.Web.Controllers
             }
             return RedirectToAction("ProductList", "Home");
         }
-        
+
+        public IActionResult InsertProduct()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult InsertProduct(ProductViewModel product)
+        {
+            var model = productService.InsertProduct(product);
+
+            if (!model.IsSuccess)
+            {
+                return View();
+            }
+
+            return RedirectToAction("ProductList", "Home");
+        }
+
 
 
 

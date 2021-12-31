@@ -8,6 +8,12 @@
 
 <div>
     <h2>Product Table</h2>
+
+    <div class="add-product-container d-flex justify-content-end mb-3">
+        <a class="add-product-button btn btn-dark" asp-action="InsertProduct" asp-controller="Product">Insert Product</a>
+    </div>
+
+
      <table class="table table-striped table-bordered table-border">
         <tr>
             <th>
@@ -86,8 +92,10 @@
     }
     .btn1{
          background-color: #4CAF50;
+         color: white;
     }
     .btn2{
         background-color: #f44336;
+        color: white;
     }
 </style>

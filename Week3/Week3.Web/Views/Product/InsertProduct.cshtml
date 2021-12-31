@@ -1,0 +1,46 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<form method="post" asp-controller="Product" asp-action="InsertProduct">
+
+    <div class="mb-3">
+        <label for="CategoryId" class="form-label">Category Id</label>
+        <input name="categoryId" type="text" class="form-control" id="categoryId" aria-describedby="authorizedIdHelp">
+    </div>
+
+    <div class="mb-3">
+        <label for="Name" class="form-label">Name</label>
+        <input type="name" name="ticketCode" class="form-control" id="name">
+    </div>
+
+    <div class="mb-3">
+        <label for="DisplayName" class="form-label">Display Name</label>
+        <input type="displayName" name="displayname" class="form-control" id="displayname">
+    </div>
+
+    <div class="mb-3">
+        <label for="Description" class="form-label">Description</label>
+        <input type="description" name="description" class="form-control" id="description">
+    </div>
+
+    <div class="mb-3">
+        <label for="Price" class="form-label">Price</label>
+        <input type="price" name="price" class="form-control" id="price">
+    </div>
+
+    <div class="mb-3">
+        <label for="Stock" class="form-label">Stock</label>
+        <input type="stock" name="stock" class="form-control" id="stock">
+    </div>
+
+    <div class="mb-3">
+        <label for="Iuser" class="form-label"> IUser</label>
+        <input type="iuser" name="iuser" class="form-control" id="iuser">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Insert Product</button>
+</form>
