@@ -38,12 +38,15 @@
             <th>
                 @Html.DisplayNameFor(model => model.IUser)
             </th>
-            <th>
-                <p>Update</p>
+            @if (auth)
+            {
+                <th>
+                    <p>Update</p>
+                </th>
+                <th>
+                    <p>Delete</p>
             </th>
-            <th>
-                <p>Delete</p>
-            </th>
+            }
         </tr>
 
         
@@ -72,12 +75,15 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.IUser)
                 </td>
-                <td>
-                    <a class="btn btn1" asp-action="UpdateProduct" asp-controller="Product" asp-route-id="@item.Id">Update</a>
+                @if (auth)
+                {
+                    <td>
+                        <a class="btn btn1" asp-action="UpdateProduct" asp-controller="Product" asp-route-id="@item.Id">Update</a>
+                    </td>
+                    <td>
+                        <a class="btn btn2" asp-action="DeleteProduct" asp-controller="Product" asp-route-id="@item.Id">Delete</a>
                 </td>
-                <td>
-                   <a class="btn btn2" asp-action="DeleteProduct" asp-controller="Product" asp-route-id="@item.Id">Delete</a>
-                </td>
+                }
             </tr>
         }
     </table>
