@@ -24,7 +24,7 @@
 <br>
 <br>
   <li><h2>Login Page</h2></li>
-<img src="image/login.PNG">
+<img src="image/Login.PNG">
 
 
 <br>
@@ -36,7 +36,7 @@
 <br>
 <br>
   <li><h2>User Page</h2></li>
-<img src="image/user.PNG">
+<img src="image/User.PNG">
 
 
 <br>
@@ -48,6 +48,6 @@
 <br>
 <br>
   <li><h2>Update Page</h2></li>
-<img src="image/update.PNG">
+<img src="image/Update.PNG">
 
 </ul>
