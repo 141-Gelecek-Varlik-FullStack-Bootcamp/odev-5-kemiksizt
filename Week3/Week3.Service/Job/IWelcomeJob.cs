@@ -10,5 +10,7 @@ namespace Week3.Service.Job
     {
         public void PrintWelcome();
 
+        public void SendEmail();
+
     }
 }

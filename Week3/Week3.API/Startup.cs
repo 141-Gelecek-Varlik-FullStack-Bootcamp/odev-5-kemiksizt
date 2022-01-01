@@ -96,6 +96,12 @@ namespace Week3.API
                 "* * * * *"
                 );
 
+            recurringJobManager.AddOrUpdate(
+                "WelcomeEmail",
+                () => serviceProvider.GetService<IWelcomeJob>().SendEmail(),
+                "* * * * * "
+                );
+
 
             app.UseRouting();
 

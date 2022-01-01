@@ -361,3 +361,6 @@ C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.API\bin\Debug\net5.
 C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.API\bin\Debug\net5.0\pt-BR\Hangfire.Core.resources.dll
 C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.API\bin\Debug\net5.0\zh-TW\Hangfire.Core.resources.dll
 C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.API\bin\Debug\net5.0\zh\Hangfire.Core.resources.dll
+C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.API\bin\Debug\net5.0\MailKit.dll
+C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.API\bin\Debug\net5.0\MimeKit.dll
+C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.API\bin\Debug\net5.0\BouncyCastle.Crypto.dll
