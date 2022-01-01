@@ -7,7 +7,46 @@
 
 <form method="post" asp-controller="Product" asp-action="InsertProduct">
 
-    <div class="mb-3">
+    <form>
+      <div class="form-row mb-3">
+        <div class="col mb-3">
+          <input type="text" class="form-control" placeholder="Category Id">
+        </div>
+        <div class="col mb-3">
+          <input type="text" class="form-control" placeholder="Name">
+        </div>
+      </div>
+
+      <div class="form-row mb-3">
+        <div class="col mb-3">
+          <input type="text" class="form-control" placeholder="Display Name">
+        </div>
+        <div class="col mb-3">
+          <input type="text" class="form-control" placeholder="Description">
+        </div>
+      </div>
+
+      <div class="form-row mb-3">
+        <div class="col mb-3">
+          <input type="text" class="form-control" placeholder="Price">
+        </div>
+        <div class="col mb-3">
+          <input type="text" class="form-control" placeholder="Stock">
+        </div>
+      </div>
+
+      <div class="form-row mb-3">
+        <div class="col mb-3">
+          <input type="text" class="form-control w-50" placeholder="IUser">
+        </div>
+      </div>
+    </form>
+
+    <button type="submit" class="btn btn-primary btn-dark">Insert Product</button>
+</form>
+
+
+@*<div class="mb-3">
         <label for="CategoryId" class="form-label">Category Id</label>
         <input name="categoryId" type="text" class="form-control" id="categoryId" aria-describedby="authorizedIdHelp">
     </div>
@@ -40,7 +79,4 @@
     <div class="mb-3">
         <label for="Iuser" class="form-label"> IUser</label>
         <input type="iuser" name="iuser" class="form-control" id="iuser">
-    </div>
-
-    <button type="submit" class="btn btn-primary">Insert Product</button>
-</form>
+    </div>*@
