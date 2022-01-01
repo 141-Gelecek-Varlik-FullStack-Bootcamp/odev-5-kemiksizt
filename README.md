@@ -19,5 +19,35 @@
   <li>Login sonrasında veri belirli bir süre Cache de tutulur. Bu süre içerisinde tekrar siteye giriş yapılırsa login olmadan direkt ürünlerin listelendiği sayfaya ulaşılır.</li>
   <li>Login işleminden sonra ürün listeleme sayfasında kullanıcı eğer yetkili ise ekleme, güncelleme ve silme butonlarını görebilir ve işlemleri gerçekleştirebilir.</li>
   <li>Kullanıcı admin değil ise yalnızca ürünleri görüntüleyebilir. Hiçbir işlem yapamaz ! </li>
-  <li></li>
+
+
+<br>
+<br>
+  <li><h2>Login Page</h2></li>
+<img src="image/login.PNG">
+
+
+<br>
+<br>
+  <li><h2>Admin Page</h2></li>
+<img src="image/admin.PNG">
+
+
+<br>
+<br>
+  <li><h2>User Page</h2></li>
+<img src="image/user.PNG">
+
+
+<br>
+<br>
+  <li><h2>Insert Page</h2></li>
+<img src="image/Insert.PNG">
+
+
+<br>
+<br>
+  <li><h2>Update Page</h2></li>
+<img src="image/update.PNG">
+
 </ul>
