@@ -15,6 +15,7 @@ using Week3.Web.Models;
 
 namespace Week3.Web.Controllers
 {
+    // Ürünlerin listelendiği sayfa, login ve cache işlemleri burada yapılır.
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -75,7 +76,6 @@ namespace Week3.Web.Controllers
             {
                 result = JsonConvert.DeserializeObject<UserViewModel>(cachedData);
                 ViewBag.Auth = result.IsAuth;
-                ViewBag.Name = result.Name;
             }
 
             var productList = productService.GetProducts().List;

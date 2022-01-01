@@ -2,6 +2,12 @@
 
 @model IEnumerable<Week3.Model.Product.ProductViewModel>
 
+
+    @*
+    Giriş yapan kişi eğer admin ise InsertProduct, UpdateProduct ve DeleteProduct butonlarını görüntüleyip bunlara
+    tıklayabilir. Eğer giriş yapan kişi normal bir kullanıcı ise yalnızca ürünleri görebilir, butonlar o kişiye gizlidir.
+    Ayrıca kişi eğer admin ise Product Table yazısının altında "ADMIN" yazısını görecektir.
+*@
 @{
     ViewBag.Title = "Market";
     var auth = ViewBag.Auth;

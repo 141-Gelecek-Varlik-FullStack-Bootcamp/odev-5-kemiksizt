@@ -14,13 +14,14 @@ namespace Week3.Service.Job
 {
     public class WelcomeJob : IWelcomeJob
     {
-
+        // Deneme amaçlı yapıldı. Her dakika çalıştırılıyor.
         public void PrintWelcome()
         {
             Console.WriteLine($"Hangfire recurring job");
         }
 
-        
+        // Email gönderme kısmı tanımlandı. Her gün aktif olan, delete olmayan ve hoşgeldin maili almayan kişilere
+        // tek tek mail gönderilir ve email kısmı true ya döner.
         public void SendEmail()
         {
             var result = new General<UserViewModel>();

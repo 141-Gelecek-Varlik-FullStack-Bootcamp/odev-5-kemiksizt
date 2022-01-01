@@ -106,3 +106,6 @@ C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.Web\obj\Debug\net5.
 C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.Web\obj\Debug\net5.0\Razor\Views\Home\ProductList.cshtml.g.cs
 C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.Web\obj\Debug\net5.0\Razor\Views\Product\UpdateProduct.cshtml.g.cs
 C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.Web\obj\Debug\net5.0\Razor\Views\Product\InsertProduct.cshtml.g.cs
+C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.Web\bin\Debug\net5.0\MailKit.dll
+C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.Web\bin\Debug\net5.0\MimeKit.dll
+C:\Users\Turab\Documents\GitHub\odev-5-kemiksizt\Week3\Week3.Web\bin\Debug\net5.0\BouncyCastle.Crypto.dll

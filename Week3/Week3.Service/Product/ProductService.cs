@@ -198,7 +198,7 @@ namespace Week3.Service.Product
             return data;
         }
 
-
+        // Id ye göre güncelleme işlemi
         public General<ProductViewModel> UpdateById(int id)
         {
             var result = new General<ProductViewModel>();

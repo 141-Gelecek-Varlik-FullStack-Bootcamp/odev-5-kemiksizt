@@ -4,6 +4,8 @@ using Week3.Service.Product;
 
 namespace Week3.Web.Controllers
 {
+    // API katmanının haricinde Web katmanı için ayrı bir controller oluşturdum. Butonlara basarak yönlendirmeler
+    // burada yapılır.
     public class ProductController : Controller
     {
         private readonly IProductService productService;
