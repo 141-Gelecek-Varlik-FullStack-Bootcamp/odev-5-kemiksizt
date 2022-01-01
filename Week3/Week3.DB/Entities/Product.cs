@@ -19,7 +19,7 @@ namespace Week3.DB.Entities
         public DateTime Idate { get; set; }
         public DateTime? Udate { get; set; }
         public int IUser { get; set; }
-        public int? Uuser { get; set; }
+        public int? UUser { get; set; }
 
         public virtual Category Category { get; set; }
         public virtual User IuserNavigation { get; set; }

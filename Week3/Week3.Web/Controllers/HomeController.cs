@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -17,12 +19,14 @@ namespace Week3.Web.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly IUserService userService;
         private readonly IProductService productService;
+        private readonly IDistributedCache distributedCache;
 
-        public HomeController(ILogger<HomeController> logger, IUserService _userService, IProductService _productService)
+        public HomeController(ILogger<HomeController> logger, IUserService _userService, IProductService _productService, IDistributedCache _distributedCache)
         {
             _logger = logger;
             userService = _userService;
             productService = _productService;
+            distributedCache = _distributedCache;
         }
 
         public IActionResult Index()
@@ -43,6 +47,25 @@ namespace Week3.Web.Controllers
             if (!permission.IsSuccess)
             {
                 return View();
+            }
+
+            var cachedData = distributedCache.GetString("LoginUser");
+
+            var cacheOptions = new DistributedCacheEntryOptions()
+            {
+                AbsoluteExpiration = DateTime.Now.AddMinutes(5)
+            };
+
+            if (string.IsNullOrEmpty(cachedData))
+            {
+                distributedCache.SetString("LoginUser", JsonConvert.SerializeObject(loginUser), cacheOptions);
+            }
+
+            var response = JsonConvert.DeserializeObject<UserViewModel>(cachedData);
+
+            if(response.IsAuth)
+            {
+                return RedirectToAction("Privacy", "Home");
             }
 
             return RedirectToAction("ProductList", "Home");

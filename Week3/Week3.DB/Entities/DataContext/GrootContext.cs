@@ -97,7 +97,7 @@ namespace Week3.DB.Entities.DataContext
                     .HasColumnType("datetime")
                     .HasColumnName("UDate");
 
-                entity.Property(e => e.Uuser).HasColumnName("UUser");
+                entity.Property(e => e.UUser).HasColumnName("UUser");
 
                 entity.HasOne(d => d.Category)
                     .WithMany(p => p.Product)
@@ -124,7 +124,7 @@ namespace Week3.DB.Entities.DataContext
                     .HasColumnName("IDate")
                     .HasDefaultValueSql("(getdate())");
 
-                entity.Property(e => e.Iuser).HasColumnName("IUser");
+                entity.Property(e => e.IUser).HasColumnName("IUser");
 
                 entity.Property(e => e.Name)
                     .IsRequired()
@@ -145,7 +145,7 @@ namespace Week3.DB.Entities.DataContext
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Uuser).HasColumnName("UUser");
+                entity.Property(e => e.UUser).HasColumnName("UUser");
             });
 
             OnModelCreatingPartial(modelBuilder);
