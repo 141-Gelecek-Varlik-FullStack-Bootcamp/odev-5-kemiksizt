@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Week3.Model;
 using Week3.Model.User;
 using Week3.Service.Product;
 using Week3.Service.User;
@@ -42,38 +43,41 @@ namespace Week3.Web.Controllers
         [HttpPost]
         public IActionResult Login(UserLoginViewModel loginUser)
         {
-            var permission = userService.Login(loginUser);
-
-            if (!permission.IsSuccess)
+            
+            General<UserLoginViewModel> result = userService.Login(loginUser);
+            if (!result.IsSuccess)
             {
                 return View();
             }
-
             var cachedData = distributedCache.GetString("LoginUser");
-
             var cacheOptions = new DistributedCacheEntryOptions()
             {
-                AbsoluteExpiration = DateTime.Now.AddMinutes(5)
+                AbsoluteExpiration = DateTime.Now.AddMinutes(2)
             };
-
             if (string.IsNullOrEmpty(cachedData))
             {
-                distributedCache.SetString("LoginUser", JsonConvert.SerializeObject(loginUser), cacheOptions);
+                distributedCache.SetString("LoginUser", JsonConvert.SerializeObject(result.Entity), cacheOptions);
             }
 
-            var response = JsonConvert.DeserializeObject<UserViewModel>(cachedData);
-
-            if(response.IsAuth)
-            {
-                return RedirectToAction("Privacy", "Home");
-            }
 
             return RedirectToAction("ProductList", "Home");
         }
 
 
+
+
         public IActionResult ProductList()
         {
+            var cachedData = distributedCache.GetString("LoginUser");
+            var result = new UserViewModel();
+
+            if (cachedData is not null)
+            {
+                result = JsonConvert.DeserializeObject<UserViewModel>(cachedData);
+                ViewBag.Auth = result.IsAuth;
+                ViewBag.Name = result.Name;
+            }
+
             var productList = productService.GetProducts().List;
 
             return View(productList);
