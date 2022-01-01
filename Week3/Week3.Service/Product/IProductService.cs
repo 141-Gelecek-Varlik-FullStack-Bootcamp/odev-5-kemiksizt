@@ -15,9 +15,9 @@ namespace Week3.Service.Product
 
         //public General<ProductViewModel> GetById(int id);
         public General<ProductViewModel> GetProducts();
-        public General<ProductViewModel> InsertProduct(ProductViewModel newProduct);
-        public General<ProductViewModel> UpdateProduct(ProductViewModel product);
-        //public General<ProductViewModel> DeleteProduct(int id);
+        public General<ProductViewModel> InsertProductt(ProductViewModel newProduct);
+        public General<ProductViewModel> UpdateProductt(ProductViewModel product);
+        public General<ProductViewModel> DeleteProductPermanently(int id);
         //public General<ProductViewModel> GetProductListById(int id);
 
         public General<ProductViewModel> UpdateById(int id);

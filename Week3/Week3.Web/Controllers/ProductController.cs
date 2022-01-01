@@ -28,7 +28,7 @@ namespace Week3.Web.Controllers
         [HttpPost]
         public IActionResult UpdateProduct(ProductViewModel product)
         {
-            var permission = productService.UpdateProduct(product);
+            var permission = productService.UpdateProductt(product);
 
             if(!permission.IsSuccess)
             {
@@ -45,12 +45,19 @@ namespace Week3.Web.Controllers
         [HttpPost]
         public IActionResult InsertProduct(ProductViewModel product)
         {
-            var model = productService.InsertProduct(product);
+            var model = productService.InsertProductt(product);
 
             if (!model.IsSuccess)
             {
                 return View();
             }
+
+            return RedirectToAction("ProductList", "Home");
+        }
+
+        public IActionResult DeleteProduct(int id)
+        {
+            productService.DeleteProductPermanently(id);
 
             return RedirectToAction("ProductList", "Home");
         }

@@ -75,7 +75,7 @@
                     <a class="btn btn1" asp-action="UpdateProduct" asp-controller="Product" asp-route-id="@item.Id">Update</a>
                 </td>
                 <td>
-                    <button class="btn btn2">Delete</button>
+                   <a class="btn btn2" asp-action="DeleteProduct" asp-controller="Product" asp-route-id="@item.Id">Delete</a>
                 </td>
             </tr>
         }

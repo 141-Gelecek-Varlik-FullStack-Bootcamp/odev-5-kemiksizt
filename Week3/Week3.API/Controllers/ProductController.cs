@@ -43,10 +43,10 @@ namespace Week3.API.Controllers
         //}
 
 
-        [HttpPost("Insert")]
-        public General<ProductViewModel> InsertProduct([FromBody] ProductViewModel newProduct)
+        [HttpPost]
+        public General<ProductViewModel> InsertProductt([FromBody] ProductViewModel newProduct)
         {
-            return productService.InsertProduct(newProduct);
+            return productService.InsertProductt(newProduct);
         }
 
         [ServiceFilter(typeof(LoginFilter))]
@@ -57,9 +57,9 @@ namespace Week3.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public General<ProductViewModel> UpdateProduct([FromBody] ProductViewModel product)
+        public General<ProductViewModel> UpdateProductt([FromBody] ProductViewModel product)
         {
-            return productService.UpdateProduct(product);
+            return productService.UpdateProductt(product);
         }
         /*
         [HttpDelete("{id}")]

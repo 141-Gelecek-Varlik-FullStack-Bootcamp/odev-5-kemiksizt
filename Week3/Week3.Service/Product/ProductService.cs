@@ -70,33 +70,33 @@ namespace Week3.Service.Product
         //    return result;
         //}
         // Sistemdeki ürüne ait tüm özellikleri silen Request. Deneme amaçlı yapılmıştır!!
-        /*
-        public General<ProductViewModel> DeleteProduct(int id)
+
+        public General<ProductViewModel> DeleteProductPermanently(int id)
         {
-           var result = new General<ProductViewModel>();
+            var result = new General<ProductViewModel>();
 
-           using (var context = new GrootContext())
-           {
-               var product = context.Product.SingleOrDefault(i => i.Id == id);
+            using (var context = new GrootContext())
+            {
+                var product = context.Product.SingleOrDefault(i => i.Id == id);
 
-               if (product is not null)
-               {
-                   context.Product.Remove(product);
-                   context.SaveChanges();
+                if (product is not null)
+                {
+                    context.Product.Remove(product);
+                    context.SaveChanges();
 
-                   result.Entity = mapper.Map<ProductViewModel>(product);
-                   result.IsSuccess = true;
-               }
-               else
-               {
-                   result.ExceptionMessage = "Ürün bulunamadı. Bilgileri kontrol ediniz";
-                   result.IsSuccess = false;
-               }
-           }
+                    result.Entity = mapper.Map<ProductViewModel>(product);
+                    result.IsSuccess = true;
+                }
+                else
+                {
+                    result.ExceptionMessage = "Ürün bulunamadı. Bilgileri kontrol ediniz";
+                    result.IsSuccess = false;
+                }
+            }
 
-           return result;
+            return result;
         }
-        */
+
 
         // Sistemdeki bütün ürünleri getiren Request(Get)
         public General<ProductViewModel> GetProducts()
@@ -125,7 +125,7 @@ namespace Week3.Service.Product
         }
 
         // Sisteme yeni ürün eklemek için kullanılan Request(Insert) 
-        public General<ProductViewModel> InsertProduct(ProductViewModel product)
+        public General<ProductViewModel> InsertProductt(ProductViewModel product)
         {
             var data = new General<ProductViewModel>();
             var InsProduct = mapper.Map<Week3.DB.Entities.Product>(product);
@@ -158,7 +158,7 @@ namespace Week3.Service.Product
 
 
         // Var olan ürünün özelliklerini değiştirmek için kullanılan Request.(Update)
-        public General<ProductViewModel> UpdateProduct(ProductViewModel product)
+        public General<ProductViewModel> UpdateProductt(ProductViewModel product)
         {
             var data = new General<ProductViewModel>();
 
